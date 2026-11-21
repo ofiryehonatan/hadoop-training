@@ -2,6 +2,8 @@
 
 Hadoop streaming word count on Amazon EMR (emr-7.14.0, 1 primary + 1 core node), run on three Project Gutenberg books (`5000-0.txt`, `2600-0.txt`, `1399-0.txt`).
 
+Hebrew version of the exercise with the answers (full Word file text): [Hadoop-training-Hebrew-answers.md](Hadoop-training-Hebrew-answers.md)
+
 ## Exercise 1
 
 Counters of the job, first with the default number of reducers and then with `-numReduceTasks 6`:
@@ -160,9 +162,14 @@ All the sorting and filtering is done inside the Python reducer, with no externa
 
 **Q3. Output of the MapReduce**
 
-Output of the job (`hadoop fs -cat /user/hduser/gutenberg-output/*`):
+Screenshot (taken after typing `hadoop fs -ls /user/hduser/gutenberg-output`):
+
+![Exercise 3 output](Screenshot%202026-11-21%20183422.png)
+
+Text version of the output:
 
 ```
+$ > hadoop fs -cat /user/hduser/gutenberg-output/*
 the     74369
 and     42768
 of      34588
